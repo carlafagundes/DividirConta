@@ -10,49 +10,50 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Menu1Fragmento extends Fragment {
+public class Menu2Fragmento extends Fragment {
 
-    EditText vTotal, qPessoas, vTaxaServico;
-    Button botaoCalcular;
+    EditText edvalor, ednumero, edgorjeta;
+    Button btncalcular;
 
-    public Menu1Fragmento() {
-
+    public Menu2Fragmento() {
+        // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.menu1_fragmento, container, false);
+        View view = inflater.inflate(R.layout.fragment_menu2_fragmento, container, false);
 
-        vTotal = (EditText) view.findViewById(R.id.vTotal);
-        qPessoas = (EditText) view.findViewById(R.id.qPessoas);
-        vTaxaServico = (EditText) view.findViewById(R.id.vTaxaServico);
+        edvalor = (EditText) view.findViewById(R.id.edvalor);
+        ednumero = (EditText) view.findViewById(R.id.ednumero);
+        edgorjeta = (EditText) view.findViewById(R.id.edgorjeta);
 
-        botaoCalcular = (Button) view.findViewById(R.id.botaoCalcular);
+        btncalcular = (Button) view.findViewById(R.id.btncalcular);
 
         //Operação para calcular
-        botaoCalcular.setOnClickListener(new View.OnClickListener() {
+        btncalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String valorTotal = vTotal.getText().toString();
-                String qtdPessoas = qPessoas.getText().toString();
-                String valorTaxaServicos = vTaxaServico.getText().toString();
+                String v1 = edvalor.getText().toString();
+                String v2 = ednumero.getText().toString();
+                String v3 = edgorjeta.getText().toString();
 
-                if (valorTotal.trim().isEmpty()||qtdPessoas.trim().isEmpty() || valorTaxaServicos.trim().isEmpty()) {
+                if (v1.trim().isEmpty()||v2.trim().isEmpty() || v3.trim().isEmpty()) {
                     AlertDialog.Builder dialogo = new AlertDialog.Builder(getContext());
                     dialogo.setTitle("AVISO");
                     dialogo.setMessage("Há dados em branco.");
                     dialogo.setNeutralButton("OK", null);
                     dialogo.show();
                 }else {
-                    double valorTotalConta = Double.parseDouble(vTotal.getText().toString());
-                    double qtdPessoasConsumidores = Double.parseDouble(qPessoas.getText().toString());
-                    double valorTaxaServicosBar = Double.parseDouble(vTaxaServico.getText().toString());
+                    double num1 = Double.parseDouble(edvalor.getText().toString());
+                    double num2 = Double.parseDouble(ednumero.getText().toString());
+                    double num3 = Double.parseDouble(edgorjeta.getText().toString());
 
-                    double resultado = ((valorTotalConta + valorTaxaServicosBar)/qtdPessoasConsumidores);
+                    double resultado = (num1 + num3)/num2;
 
                     AlertDialog.Builder dialogo = new AlertDialog.Builder(getContext());
 
@@ -69,9 +70,5 @@ public class Menu1Fragmento extends Fragment {
         });
 
         return view;
-
     }
-
 }
-
-

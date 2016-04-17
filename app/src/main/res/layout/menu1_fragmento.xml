@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/valor" />
+            android:id="@+id/vTotal" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/numPessoas" />
+            android:id="@+id/qPessoas" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,13 +57,13 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/taxaServicos" />
+            android:id="@+id/vTaxaServico" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calcular"
-            android:id="@+id/btnCalcular"
+            android:id="@+id/botaoCalcular"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
