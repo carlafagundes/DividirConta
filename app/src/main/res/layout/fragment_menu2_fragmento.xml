@@ -1,0 +1,73 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gabriel.dividirconta.Menu2Fragmento">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RelativeLayout
+        android:layout_width="195dp"
+        android:layout_height="215dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor da Conta"
+            android:id="@+id/txtValor"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/btncalcular" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edvalor"
+            android:layout_below="@+id/txtValor"
+            android:layout_alignEnd="@+id/txtNumero"
+            android:layout_alignStart="@+id/txtNumero" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de Amigos"
+            android:id="@+id/txtNumero"
+            android:layout_below="@+id/edvalor"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edgorjeta"
+            android:layout_below="@+id/textGorjeta"
+            android:layout_alignEnd="@+id/txtNumero"
+            android:layout_alignStart="@+id/txtNumero" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gorjeta"
+            android:id="@+id/textGorjeta"
+            android:layout_below="@+id/ednumero"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ednumero"
+            android:layout_below="@+id/txtNumero"
+            android:layout_alignEnd="@+id/txtNumero"
+            android:layout_alignStart="@+id/txtNumero" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            android:id="@+id/btncalcular"
+            android:singleLine="true"
+            android:layout_below="@+id/edgorjeta"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</FrameLayout>
